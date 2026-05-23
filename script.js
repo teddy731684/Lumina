@@ -83,10 +83,10 @@ function applyTheme(theme) {
 function initScrollAnimations() {
   // Stagger children of these groups
   document.querySelectorAll('.services-grid .service-card').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.1}s`;
+    el.style.transitionDelay = `${i * 0.15}s`;
   });
   document.querySelectorAll('.stats-grid .stat-item').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.08}s`;
+    el.style.transitionDelay = `${i * 0.12}s`;
   });
 
   const observer = new IntersectionObserver((entries) => {
