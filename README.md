@@ -5,8 +5,11 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![FormSubmit](https://img.shields.io/badge/FormSubmit-Contact_Form-4A90D9)](https://formsubmit.co/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)](#license)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-teddy731684.github.io-22D3EE?logo=github)](https://teddy731684.github.io/Lumina/)
 
 A luxury interior design studio landing page. No framework, no build step, no dependencies — pure HTML, CSS, and JavaScript.
+
+🌐 **Live demo:** [https://teddy731684.github.io/Lumina/](https://teddy731684.github.io/Lumina/)
 
 ## About
 
