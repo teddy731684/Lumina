@@ -11,6 +11,8 @@ A luxury interior design studio landing page. No framework, no build step, no de
 
 🌐 **Live demo:** [https://teddy731684.github.io/Lumina/](https://teddy731684.github.io/Lumina/)
 
+![Lumina Interiors screenshot](screenshot.png)
+
 ## About
 
 Lumina Interiors is a fully responsive, single-page marketing site built for a high-end interior design studio. Every section is engineered for first impressions: an animated hero, filterable portfolio grid with a full-screen lightbox, scroll-triggered stats counter, testimonial carousel, and a contact form wired to FormSubmit for zero-backend lead capture.
