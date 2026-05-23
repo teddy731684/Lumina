@@ -24,7 +24,7 @@ The CSS variable system supports a complete **dark / light mode** with no flash 
 ### Theming & Design
 
 * **Dark / light mode** — zero-FOUC toggle backed by `localStorage`; semantic CSS aliases (`--bg-primary`, `--text-primary`) are the only variables that change in dark mode, keeping the palette vars stable
-* **CSS variable system** — all brand colours (`--color-gold`, `--color-black`, etc.) in one `:root` block; re-theming is a single-file edit
+* **Italian Classic palette** — `--color-orange` (terracotta), `--color-gold`, `--color-blue` (sky) and `--color-ivory` all defined in one `:root` block; re-theming is a single-file edit
 * **Scroll fade-in animations** — `IntersectionObserver` adds `visible` to any `.fade-in` element on entry; stagger delays injected inline by JS for service cards and stat items
 
 ### Portfolio
@@ -52,7 +52,7 @@ The CSS variable system supports a complete **dark / light mode** with no flash 
 | **Markup** | HTML5 (semantic, ARIA-labelled) |
 | **Styles** | CSS3 — custom properties, Grid, Flexbox, `@keyframes`, `backdrop-filter` |
 | **Scripting** | Vanilla JavaScript ES2022 — `IntersectionObserver`, `fetch`, `requestAnimationFrame` |
-| **Fonts** | Google Fonts — Playfair Display + Inter |
+| **Fonts** | Google Fonts — Cormorant Garamond, EB Garamond, Playfair Display |
 | **Form backend** | FormSubmit (AJAX mode, no server required) |
 | **Dev server** | `npx serve` or VS Code Live Server |
 

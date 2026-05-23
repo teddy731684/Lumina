@@ -54,6 +54,12 @@
   --z-lightbox: 2000;
   --z-float:    900;
   --z-toast:    3000;
+
+  /* Functional colours (non-palette, kept in :root) */
+  --color-error:        #C04040;
+  --color-error-dim:    rgba(192, 64, 64, 0.12);
+  --color-success-bg:   #2A5E3A;
+  --color-error-bg:     #7A2020;
 }
 
 /* Dark mode overrides */
@@ -217,6 +223,17 @@ h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 600; letter-spacing: 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Global focus-visible ring — ensures keyboard nav is always visible */
+:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+/* Remove default outline when using mouse (pointer focus) */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* 4. NAVBAR
@@ -795,9 +812,14 @@ h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 600; letter-spacing: 
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 2px;
-  outline: none;
+  outline: none; /* replaced by border + box-shadow on :focus below */
   transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
   -webkit-appearance: none;
+}
+/* Inputs use a border+shadow focus ring instead of outline — suppress the global rule */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: none;
 }
 .form-group input:focus,
 .form-group textarea:focus {
@@ -806,8 +828,8 @@ h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 600; letter-spacing: 
 }
 .form-group input.invalid,
 .form-group textarea.invalid {
-  border-color: #C04040;
-  box-shadow: 0 0 0 3px rgba(192, 64, 64, 0.12);
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px var(--color-error-dim);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder { color: var(--text-muted); opacity: 0.6; }
@@ -815,7 +837,7 @@ h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 600; letter-spacing: 
 
 .field-error {
   font-size: 0.76rem;
-  color: #C04040;
+  color: var(--color-error);
   min-height: 1.1em;
   display: block;
 }
@@ -885,7 +907,7 @@ h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 600; letter-spacing: 
 
 .footer-links h4,
 .footer-contact-info h4 {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: 0.66rem;
   font-weight: 500;
   letter-spacing: 0.24em;
@@ -1057,8 +1079,8 @@ h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 600; letter-spacing: 
   letter-spacing: 0.04em;
 }
 .toast.visible { opacity: 1; transform: translateY(0); }
-.toast-success { background: #2A5E3A; border-left: 3px solid var(--color-gold); }
-.toast-error   { background: #7A2020; border-left: 3px solid var(--color-orange); }
+.toast-success { background: var(--color-success-bg); border-left: 3px solid var(--color-gold); }
+.toast-error   { background: var(--color-error-bg);  border-left: 3px solid var(--color-orange); }
 
 /* 15. RESPONSIVE
    ===================================================== */
