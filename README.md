@@ -41,7 +41,7 @@ The CSS variable system supports a complete **dark / light mode** with no flash 
 
 ### Lead Generation
 
-* **Contact form** — posts JSON to [FormSubmit](https://formsubmit.co) with inline client-side validation; `_honey` and `_captcha` hidden fields for spam protection and AJAX mode
+* **Contact form** — posts JSON to [FormSubmit](https://formsubmit.co) with inline client-side validation; `_honey` and `_captcha` hidden fields for spam protection and AJAX mode; **voice confirmation** via Web Speech API speaks "Hurray, your form is submitted successfully" on a successful send
 * **WhatsApp float button** — fixed floating CTA linking directly to WhatsApp chat
 * **Back-to-top button** — appears after 400 px of scroll, smooth-scrolls to top
 
