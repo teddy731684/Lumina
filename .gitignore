@@ -1,0 +1,14 @@
+node_modules/
+package-lock.json
+package.json
+
+# Playwright temp
+revamp-*.png
+form-test-result.png
+screenshot-revamp.mjs
+test-form.mjs
+
+# MCP / skills tooling
+.agents/
+skills-lock.json
+mcp.json
