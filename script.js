@@ -378,6 +378,10 @@ function initForm() {
 
       if (json.success === 'true' || json.success === true) {
         showToast("Message sent! We'll be in touch within 24 hours.", 'success');
+        if ('speechSynthesis' in window) {
+          const utter = new SpeechSynthesisUtterance('HURRAY, YOUR FORM IS SUBMITTED SUCCESSFULLY');
+          window.speechSynthesis.speak(utter);
+        }
         form.reset();
         clearAllErrors();
       } else {
